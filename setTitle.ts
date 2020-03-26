@@ -28,7 +28,7 @@
 		means setTitle will only set the title for the next page view tracking
 		and not subsequent page views.
 */
-const setTitleMod = (autoReset:boolean = true)=>(i:any, hstc:any)=>{
+window.setTitleMod = (autoReset:boolean = true)=>(i:any, hstc:any)=>{
 	hstc.tracking.Tracker.prototype.setTitle = function(title:string){
 		this.title = title;
 	};
